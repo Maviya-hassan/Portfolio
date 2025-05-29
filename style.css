@@ -1,0 +1,367 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+html,
+body {
+    font-size: 16px;
+}
+
+header {
+    background: royalblue;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+
+
+.my-max-width {
+    width: 100%;
+    max-width: 1400px;
+    margin-inline: auto;
+}
+
+nav {
+    width: 100%;
+    max-width: 1400px;
+    min-height: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 2rem;
+}
+
+nav .left p {
+    font-size: 1.5rem;
+    color: white;
+}
+
+nav .right ul {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+}
+
+nav .right ul li {
+    padding: 5px 10px;
+    position: relative;
+}
+
+.nav_list::after {
+    height: 3px;
+    border-radius: 3px;
+    width: 100%;
+    content: ' ';
+    display: block;
+    background-color: rgb(199, 199, 199);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: ease-out;
+    transition-duration: 300ms;
+    transform-origin: center;
+    transform: scaleX(0%);
+}
+
+.nav_list:hover.nav_list::after {
+    transform: scaleX(100%);
+    cursor: pointer;
+}
+
+
+nav .right ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+#my-img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    object-position: center top;
+}
+
+#intro {
+    width: 100%;
+    max-width: 1400px;
+    margin-inline: auto;
+    display: flex;
+    padding: 1rem;
+    margin-block: 1rem;
+    align-items: center;
+    min-height: calc(100dvh - 5.5rem);
+    justify-content: space-between;
+    padding-inline: 2rem;
+}
+
+.left-intro {
+    width: 100%;
+    max-width: 40rem;
+}
+
+.right-intro {
+    border: 3px solid royalblue;
+    margin-right: 5rem;
+    border-radius: 10rem;
+    overflow: hidden;
+}
+
+.heading-primary {
+    font-size: 3rem;
+}
+
+#intro-heading-p {
+    margin-bottom: 1.5rem;
+}
+
+.clr-blue {
+    color: royalblue;
+}
+
+.heading-secondary {
+    font-size: 1.5rem;
+    width: 100%;
+    max-width: 30rem;
+    line-height: 25px;
+}
+
+.text-primary {
+    width: 100%;
+    max-width: 30rem;
+    color: rgb(43, 43, 43);
+    margin-bottom: 2rem;
+}
+
+.btn-container {
+    width: 100%;
+    max-width: 15rem;
+    display: flex;
+    justify-content: space-between;
+    margin-inline: 16px;
+    gap: 0.5rem;
+}
+
+.btn {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 6px 12px rgba(37, 117, 252, 0.4);
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+    user-select: none;
+}
+
+.btn:hover {
+    background: linear-gradient(135deg, #2575fc, #6a11cb);
+    box-shadow: 0 8px 20px rgba(106, 17, 203, 0.6);
+    transform: translateY(-3px);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(37, 117, 252, 0.3);
+}
+
+#project-section {
+}
+
+.project-categories {
+    display: flex;
+    flex-flow: column;
+    gap: 0.3rem;
+}
+
+.project-catagory {
+    padding: 0.8rem 0.5rem;
+    
+}
+
+.project{
+    display: flex;
+    gap:1rem;
+}
+
+/* css code my project card  */
+.project-card {
+    margin-top: 1rem;
+    width: 320px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
+}
+
+.project-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.project-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.project-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.project-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.project-buttons a {
+    flex: 1;
+    text-decoration: none;
+    padding: 10px 0;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(37, 117, 252, 0.3);
+    user-select: none;
+}
+
+.project-buttons a.live-btn {
+    background: #2575fc;
+    color: white;
+}
+
+.project-buttons a.live-btn:hover {
+    background: #1a52d1;
+    box-shadow: 0 6px 16px rgba(37, 117, 252, 0.6);
+}
+
+.project-buttons a.github-btn {
+    background: #333;
+    color: white;
+}
+
+.project-buttons a.github-btn:hover {
+    background: #555;
+    box-shadow: 0 6px 16px rgba(50, 50, 50, 0.6);
+}
+
+.live-btn {
+  background: #2575fc;
+  color: white;
+  padding: 10px 0;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+  box-shadow: 0 4px 12px rgba(37, 117, 252, 0.3);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  user-select: none;
+  text-decoration: none;
+}
+
+.live-btn:hover {
+  background: #1a52d1;
+  box-shadow: 0 6px 16px rgba(37, 117, 252, 0.6);
+}
+
+
+/* css code for my about section  */
+.about-section {
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  gap: 40px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.about-container{
+    display: flex;
+    gap: 1rem;
+}
+
+.about-left img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top center;
+  border:2px solid royalblue ;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.about-right {
+  flex: 1;
+}
+
+.about-right h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.about-right p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.resume-btn {
+  background: #2575fc;
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 0 6px 12px rgba(37, 117, 252, 0.4);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  user-select: none;
+}
+
+.resume-btn:hover {
+  background: #1a52d1;
+  box-shadow: 0 8px 20px rgba(37, 117, 252, 0.6);
+}
+
+.project-seciton{
+    margin-top: 1rem;
+}
+
+
+#footer{
+    margin-top: 2rem;
+    background-color: royalblue;
+    height: 10rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
